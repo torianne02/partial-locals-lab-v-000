@@ -17,8 +17,8 @@ class Student < ActiveRecord::Base
   def self.search(user_input)
     if !user_input.empty?
       where('NAME like ?', "%#{user_input}%")
-    else 
+    else
       self.all
-    end 
+    end
   end
 end
